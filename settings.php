@@ -27,7 +27,9 @@ defined('MOODLE_INTERNAL') || die();
 
 if ($hassiteconfig) {
     // phpcs:ignore Generic.CodeAnalysis.EmptyStatement.DetectedIf
-    if ($ADMIN->fulltree) {
-        // TODO: Define the plugin settings page - {@link https://docs.moodle.org/dev/Admin_settings}.
-    }
+
+    $settings = new admin_settingpage( 'tool_learningcompanions', get_string('learningcompanions_settings', 'tool_learningcompanions') );
+
+    $ADMIN->add('root', new admin_category('lcconfig', get_string('adminareaname', 'local_learningcompanions')));
+    $ADMIN->add('lcconfig', $settings);
 }

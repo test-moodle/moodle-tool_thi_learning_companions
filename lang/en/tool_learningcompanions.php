@@ -26,3 +26,4 @@
 defined('MOODLE_INTERNAL') || die();
 
 $string['pluginname'] = 'Learning Companions - Admin Dashboard';
+$string['learningcompanions_settings'] = 'Admin tool learningcompanions';
