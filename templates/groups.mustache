@@ -1,0 +1,52 @@
+<h1>{{#str}}groupoverview, tool_learningcompanions{{/str}}</h1>
+{{#hasgroups}}
+    <table class="stripe hover compact" id="allgroupstable" data-paging="true" data-page-length="50">
+        <thead>
+            <tr>
+                <th>{{#str}}groupname, tool_learningcompanions{{/str}}</th>
+                <th>{{#str}}membercount, tool_learningcompanions{{/str}}</th>
+                <th>{{#str}}groupdescription, tool_learningcompanions{{/str}}</th>
+                <th>{{#str}}groupcreatedby, tool_learningcompanions{{/str}}</th>
+                <th>{{#str}}groupadmins, tool_learningcompanions{{/str}}</th>
+                <th>{{#str}}grouptimecreated, tool_learningcompanions{{/str}}</th>
+                <th>{{#str}}closedgroup, tool_learningcompanions{{/str}}</th>
+            </tr>
+        </thead>
+        <tbody>
+    {{#groups}}
+    <tr>
+        <td>
+            {{name}}
+        </td>
+        <td>
+            {{membercount}}
+        </td>
+        <td {{#descriptioncut}} data-balloon="{{origindescription}}" data-balloon-pos="up" data-balloon-blunt data-balloon-length="xlarge" {{/descriptioncut}}>
+            {{description}}
+        </td>
+        <td>
+            <span class="groupcreaterprofilelink">
+                <a href="{{createdby_profileurl}}">{{createdby_fullname}}</a>
+            </span>
+        </td>
+        <td>
+            {{#admins}}
+                <span class="groupadminprofilelink">
+                    <a href="{{profileurl}}">{{fullname}}</a>
+                </span>
+            {{/admins}}
+        </td>
+        <td>
+            {{timecreated_dmY}}
+        </td>
+        <td>
+            {{{closedgroupicon}}}
+        </td>
+    </tr>
+    {{/groups}}
+        </tbody>
+    </table>
+{{/hasgroups}}
+{{^groups}}
+    <p>{{#str}}nogroups, tool_learningcompanions{{/str}}</p>
+{{/groups}}
