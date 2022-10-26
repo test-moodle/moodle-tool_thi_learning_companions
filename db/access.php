@@ -33,4 +33,12 @@ $capabilities = [
             'manager' => CAP_ALLOW,
         ],
     ],
+    'tool/learningcompanions:comments_manage' => [
+        'riskbitmask' => RISK_MANAGETRUST|RISK_CONFIG|RISK_PERSONAL,
+        'captype' => 'write',
+        'contextlevel' => CONTEXT_SYSTEM,
+        'archetypes' => [
+            'manager' => CAP_ALLOW,
+        ],
+    ],
 ];

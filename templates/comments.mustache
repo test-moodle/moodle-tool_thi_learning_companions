@@ -1,0 +1,48 @@
+<h1>{{#str}}commentsoverview, tool_learningcompanions{{/str}}</h1>
+{{#hascomments}}
+    <table class="stripe hover compact" id="flaggedcommentstable" data-paging="true" data-page-length="50">
+        <thead>
+            <tr>
+                <th>{{#str}}comment, tool_learningcompanions{{/str}}</th>
+                <th>{{#str}}commentedby, tool_learningcompanions{{/str}}</th>
+                <th>{{#str}}flaggedby, tool_learningcompanions{{/str}}</th>
+                <th>{{#str}}commentdate, tool_learningcompanions{{/str}}</th>
+                <th>{{#str}}relatedchat, tool_learningcompanions{{/str}}</th>
+                <th>{{#str}}actions, tool_learningcompanions{{/str}}</th>
+            </tr>
+        </thead>
+        <tbody>
+    {{#comments}}
+    <tr>
+        <td {{#commentcut}} data-balloon="{{origincomment}}" data-balloon-pos="up" data-balloon-blunt data-balloon-length="xlarge" {{/commentcut}}>
+            {{comment}}
+        </td>
+        <td>
+            <span class="authorprofilelink">
+                <a href="{{author_profileurl}}">{{author_fullname}}</a>
+            </span>
+        </td>
+        <td>
+            <span class="flaggedbyprofilelink">
+                <a href="{{flaggedbyuser_profileurl}}">{{flaggedbyuser_fullname}}</a>
+            </span>
+        </td>
+        <td>
+            {{commentdate}}
+        </td>
+        <td>
+            <span class="relatedchatlink">
+                <a href="#">link</a>
+            </span>
+        </td>
+        <td>
+            X X O
+        </td>
+    </tr>
+    {{/comments}}
+        </tbody>
+    </table>
+{{/hascomments}}
+{{^comments}}
+    <p>{{#str}}noflaggedcomments, tool_learningcompanions{{/str}}</p>
+{{/comments}}

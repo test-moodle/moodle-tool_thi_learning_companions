@@ -6,7 +6,7 @@ $context = context_system::instance();
 require_capability( 'tool/learningcompanions:group_manage', $context);
 
 $PAGE->set_context($context);
-$PAGE->set_url($CFG->wwwroot.'/admin/tool/learningcompanions/courses/index.php');
+$PAGE->set_url($CFG->wwwroot.'/admin/tool/learningcompanions/groups/index.php');
 $PAGE->set_pagelayout('standard');
 $PAGE->requires->js_call_amd('tool_learningcompanions/groups', 'init');
 $PAGE->requires->css('/local/learningcompanions/vendor/DataTables/datatables.min.css');

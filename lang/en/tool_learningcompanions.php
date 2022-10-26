@@ -29,7 +29,7 @@ $string['pluginname'] = 'Learning Companions - Admin Dashboard';
 $string['learningcompanions_settings'] = 'Admin tool learningcompanions';
 
 // group overview
-$string['groupoverview'] = 'Gruppenübersicht';
+$string['groupoverview'] = 'Group overview';
 $string['groupname'] = 'Group name';
 $string['groupdescription'] = 'Group description';
 $string['membercount'] = 'Member count';
@@ -37,6 +37,16 @@ $string['groupcreatedby'] = 'Created by';
 $string['groupadmins'] = 'Admins';
 $string['grouptimecreated'] = 'Created on';
 $string['closedgroup'] = 'Is closed group';
-$string['nogroups'] = 'Keine Gruppen im System.';
+$string['nogroups'] = 'There are no groups.';
+
+// comments overview
+$string['commentsoverview'] = 'Flagged comments overview';
+$string['comment'] = 'Comment';
+$string['commentedby'] = 'Commented by';
+$string['flaggedby'] = 'Flagged by';
+$string['commentdate'] = 'Commented on';
+$string['relatedchat'] = 'Related chat';
+$string['actions'] = 'Actions';
+$string['noflaggedcomments'] = 'There are no flagged comments.';
 
 $string['datatables_url'] = $CFG->wwwroot . '/admin/tool/learningcompanions/lang/en/datatables.json';
