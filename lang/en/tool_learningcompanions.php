@@ -27,6 +27,7 @@ defined('MOODLE_INTERNAL') || die();
 
 $string['pluginname'] = 'Learning Companions - Admin Dashboard';
 $string['learningcompanions_settings'] = 'Admin tool learningcompanions';
+$string['navbar_learningcompanions'] = 'Learning companions';
 
 // group overview
 $string['groupoverview'] = 'Group overview';
@@ -38,6 +39,7 @@ $string['groupadmins'] = 'Admins';
 $string['grouptimecreated'] = 'Created on';
 $string['closedgroup'] = 'Is closed group';
 $string['nogroups'] = 'There are no groups.';
+$string['navbar_groups'] = 'Group overview';
 
 // comments overview
 $string['commentsoverview'] = 'Flagged comments overview';
@@ -48,5 +50,6 @@ $string['commentdate'] = 'Commented on';
 $string['relatedchat'] = 'Related chat';
 $string['actions'] = 'Actions';
 $string['noflaggedcomments'] = 'There are no flagged comments.';
+$string['navbar_comments'] = 'Flagged comments';
 
 $string['datatables_url'] = $CFG->wwwroot . '/admin/tool/learningcompanions/lang/en/datatables.json';

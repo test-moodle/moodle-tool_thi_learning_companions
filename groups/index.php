@@ -11,6 +11,8 @@ $PAGE->set_pagelayout('standard');
 $PAGE->requires->js_call_amd('tool_learningcompanions/groups', 'init');
 $PAGE->requires->css('/local/learningcompanions/vendor/DataTables/datatables.min.css');
 $PAGE->requires->css('/local/learningcompanions/vendor/balloon.css');
+$PAGE->navbar->add(get_string('navbar_learningcompanions', 'tool_learningcompanions'));
+$PAGE->navbar->add(get_string('navbar_groups', 'tool_learningcompanions'), new moodle_url('/admin/tool/learningcompanions/groups/index.php'));
 
 $groups = \local_learningcompanions\groups::get_all_groups(true, true);
 

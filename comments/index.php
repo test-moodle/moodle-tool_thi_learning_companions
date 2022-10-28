@@ -11,6 +11,8 @@ $PAGE->set_pagelayout('standard');
 $PAGE->requires->js_call_amd('tool_learningcompanions/comments', 'init');
 $PAGE->requires->css('/local/learningcompanions/vendor/DataTables/datatables.min.css');
 $PAGE->requires->css('/local/learningcompanions/vendor/balloon.css');
+$PAGE->navbar->add(get_string('navbar_learningcompanions', 'tool_learningcompanions'));
+$PAGE->navbar->add(get_string('navbar_comments', 'tool_learningcompanions'), new moodle_url('/admin/tool/learningcompanions/comments/index.php'));
 
 $comments = \local_learningcompanions\chats::get_all_flagged_comments(true, true);
 
