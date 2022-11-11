@@ -29,7 +29,9 @@ if ($hassiteconfig) {
     // phpcs:ignore Generic.CodeAnalysis.EmptyStatement.DetectedIf
 
     $settings = new admin_settingpage( 'tool_learningcompanions', get_string('learningcompanions_settings', 'tool_learningcompanions') );
-
-    $ADMIN->add('root', new admin_category('lcconfig', get_string('adminareaname', 'local_learningcompanions')));
+    $category = new admin_category('lcconfig', get_string('adminareaname', 'local_learningcompanions'));
+    if (!$ADMIN->locate('lcconfig')) { // avoids "duplicate admin page name" warnings
+        $ADMIN->add('root', $category);
+    }
     $ADMIN->add('lcconfig', $settings);
 }
