@@ -28,8 +28,9 @@ defined('MOODLE_INTERNAL') || die();
 $string['pluginname'] = 'Learning Companions - Admin Dashboard';
 $string['learningcompanions_settings'] = 'Admin tool learningcompanions';
 $string['navbar_learningcompanions'] = 'Learning companions';
+$string['datatables_url'] = $CFG->wwwroot . '/admin/tool/learningcompanions/lang/en/datatables.json';
 
-// group overview
+// Group overview
 $string['groupoverview'] = 'Group overview';
 $string['groupname'] = 'Group name';
 $string['groupdescription'] = 'Group description';
@@ -41,7 +42,7 @@ $string['closedgroup'] = 'Is closed group';
 $string['nogroups'] = 'There are no groups.';
 $string['navbar_groups'] = 'Group overview';
 
-// comments overview
+// Comments overview
 $string['commentsoverview'] = 'Flagged comments overview';
 $string['comment'] = 'Comment';
 $string['commentedby'] = 'Commented by';
@@ -52,4 +53,12 @@ $string['actions'] = 'Actions';
 $string['noflaggedcomments'] = 'There are no flagged comments.';
 $string['navbar_comments'] = 'Flagged comments';
 
-$string['datatables_url'] = $CFG->wwwroot . '/admin/tool/learningcompanions/lang/en/datatables.json';
+// Dashboard
+$string['dashboard_comments'] = '{$a} Tagged comments';
+$string['dashboard_groups'] = '{$a} Groups';
+$string['dashboard_comments_single'] = '1 tagged comment';
+$string['dashboard_groups_single'] = '1 group';
+$string['icon_comments'] = 'fa fa-graduation-cap';
+$string['icon_groups'] = 'fa fa-users';
+$string['manage_comments'] = 'Manage comments';
+$string['manage_groups'] = 'Manage groups';

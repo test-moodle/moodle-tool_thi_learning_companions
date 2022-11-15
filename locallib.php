@@ -15,17 +15,34 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Plugin version and other meta-data are defined here.
+ * Local library file.
  *
  * @package     tool_learningcompanions
+ * @category    admin
  * @copyright   2022 ICON Vernetzte Kommunikation GmbH <info@iconnewmedia.de>
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die();
+namespace tool_learningcompanions;
 
-$plugin->component = 'tool_learningcompanions';
-$plugin->release = '0.1.0';
-$plugin->version = 2022111504;
-$plugin->requires = 2019111800;
-$plugin->dependencies = array('local_learningcompanions' => 2022102501);
+function getDashboardHeadline_Comments(){
+    $comments = \local_learningcompanions\chats::get_all_flagged_comments();
+    $commentcount = count($comments);
+    $suffix = '';
+    if ($commentcount === 1) {
+        $suffix = '_single';
+    }
+    $headline = get_string('dashboard_comments'.$suffix, 'tool_learningcompanions', $commentcount);
+    return $headline;
+}
+
+function getDashboardHeadline_Groups() {
+    $groups = \local_learningcompanions\groups::get_all_groups();
+    $groupcount = count($groups);
+    $suffix = '';
+    if ($groupcount === 1) {
+        $suffix = '_single';
+    }
+    $headline = get_string('dashboard_groups'.$suffix, 'tool_learningcompanions', $groupcount);
+    return $headline;
+}

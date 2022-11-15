@@ -25,6 +25,14 @@
 defined('MOODLE_INTERNAL') || die();
 
 $capabilities = [
+    'tool/learningcompanions:manage' => [
+        'riskbitmask' => RISK_MANAGETRUST|RISK_CONFIG|RISK_PERSONAL,
+        'captype' => 'write',
+        'contextlevel' => CONTEXT_SYSTEM,
+        'archetypes' => [
+            'manager' => CAP_ALLOW,
+        ],
+    ],
     'tool/learningcompanions:group_manage' => [
         'riskbitmask' => RISK_MANAGETRUST|RISK_CONFIG|RISK_PERSONAL,
         'captype' => 'write',
