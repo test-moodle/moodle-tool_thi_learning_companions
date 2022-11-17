@@ -28,6 +28,7 @@ defined('MOODLE_INTERNAL') || die();
 $string['pluginname'] = 'Learning Companions - Admin Dashboard';
 $string['learningcompanions_settings'] = 'Admin tool learningcompanions';
 $string['navbar_learningcompanions'] = 'Learning companions';
+$string['administration_head'] = 'Learning companions administration';
 $string['datatables_url'] = $CFG->wwwroot . '/admin/tool/learningcompanions/lang/en/datatables.json';
 
 // Group overview
@@ -52,6 +53,16 @@ $string['relatedchat'] = 'Related chat';
 $string['actions'] = 'Actions';
 $string['noflaggedcomments'] = 'There are no flagged comments.';
 $string['navbar_comments'] = 'Flagged comments';
+$string['delete_comment'] = 'Delete comment';
+$string['untag_comment'] = 'Untag comment';
+$string['modal-deletecomment-title'] = 'Delete this comment?';
+$string['modal-deletecomment-text'] = '{$a}';
+$string['modal-deletecomment-okaybutton'] = 'Delete comment';
+$string['modal-deletecomment-cancelbutton'] = 'Cancel';
+$string['modal-untagcomment-title'] = 'Untag this comment?';
+$string['modal-untagcomment-text'] = '{$a}';
+$string['modal-untagcomment-okaybutton'] = 'Untag comment';
+$string['modal-untagcomment-cancelbutton'] = 'Cancel';
 
 // Dashboard
 $string['dashboard_comments'] = '{$a} Tagged comments';
