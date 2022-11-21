@@ -17,6 +17,13 @@ $PAGE->navbar->add(get_string('navbar_comments', 'tool_learningcompanions'), new
 $comments = \local_learningcompanions\chats::get_all_flagged_comments(true, true);
 
 echo $OUTPUT->header();
+
+$notification = optional_param('n', null, PARAM_TEXT);
+if (!is_null($notification)) {
+    $notificationtype = substr($notification, 0, 2) == 'n_' ? 'error' : 'success';
+    echo $OUTPUT->notification(get_string('notification_'.$notification, 'tool_learningcompanions'), $notificationtype);
+}
+
 $hascomments = count($comments) > 0;
 echo $OUTPUT->render_from_template('tool_learningcompanions/comments', array(
     'hascomments' => $hascomments,

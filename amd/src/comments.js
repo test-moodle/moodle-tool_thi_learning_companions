@@ -112,8 +112,12 @@ define([
                         action: 'deletecomment',
                         commentid: commentid
                     },
-                    success: function () {
-                        window.location.reload();
+                    success: function (data) {
+                        if (data === 'fail') {
+                            window.location.href = (M.cfg.wwwroot + '/admin/tool/learningcompanions/comments/index.php?n=n_d');
+                        } else {
+                            window.location.href = (M.cfg.wwwroot + '/admin/tool/learningcompanions/comments/index.php?n=d');
+                        }
                     }
                 });
             });
@@ -130,8 +134,12 @@ define([
                         action: 'untagcomment',
                         commentid: commentid
                     },
-                    success: function () {
-                        window.location.reload();
+                    success: function (data) {
+                        if (data === 'fail') {
+                            window.location.href = (M.cfg.wwwroot + '/admin/tool/learningcompanions/comments/index.php?n=n_uf');
+                        } else {
+                            window.location.href = (M.cfg.wwwroot + '/admin/tool/learningcompanions/comments/index.php?n=uf');
+                        }
                     }
                 });
             });

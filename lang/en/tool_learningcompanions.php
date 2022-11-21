@@ -63,6 +63,10 @@ $string['modal-untagcomment-title'] = 'Untag this comment?';
 $string['modal-untagcomment-text'] = '{$a}';
 $string['modal-untagcomment-okaybutton'] = 'Untag comment';
 $string['modal-untagcomment-cancelbutton'] = 'Cancel';
+$string['notification_uf'] = 'Comment successfully unflagged';
+$string['notification_n_uf'] = 'Could not unflagg comment';
+$string['notification_d'] = 'Comment successfully deleted.';
+$string['notification_n_d'] = 'Could not delete comment.';
 
 // Dashboard
 $string['dashboard_comments'] = '{$a} Tagged comments';
