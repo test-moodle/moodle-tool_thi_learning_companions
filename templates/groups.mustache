@@ -13,37 +13,37 @@
             </tr>
         </thead>
         <tbody>
-    {{#groups}}
-    <tr>
-        <td>
-            {{name}}
-        </td>
-        <td>
-            {{membercount}}
-        </td>
-        <td {{#descriptioncut}} data-balloon="{{origindescription}}" data-balloon-pos="up" data-balloon-blunt data-balloon-length="xlarge" {{/descriptioncut}}>
-            {{description}}
-        </td>
-        <td>
-            <span class="groupcreaterprofilelink">
-                <a href="{{createdby_profileurl}}">{{createdby_fullname}}</a>
-            </span>
-        </td>
-        <td>
-            {{#admins}}
-                <span class="groupadminprofilelink">
-                    <a href="{{profileurl}}">{{fullname}}</a>
-                </span>
-            {{/admins}}
-        </td>
-        <td>
-            {{timecreated_dmY}}
-        </td>
-        <td>
-            {{{closedgroupicon}}}
-        </td>
-    </tr>
-    {{/groups}}
+        {{#groups}}
+            <tr>
+                <td>
+                    {{name}}
+                </td>
+                <td>
+                    {{membercount}}
+                </td>
+                <td {{#descriptioncut}} data-balloon="{{origindescription}}" data-balloon-pos="up" data-balloon-blunt data-balloon-length="xlarge" {{/descriptioncut}}>
+                    {{description}}
+                </td>
+                <td>
+                    <span class="groupcreaterprofilelink">
+                        <a href="{{createdby_profileurl}}">{{createdby_fullname}}</a>
+                    </span>
+                </td>
+                <td>
+                    {{#admins}}
+                        <span class="groupadminprofilelink">
+                            <a href="{{profileurl}}">{{fullname}}</a>
+                        </span>
+                    {{/admins}}
+                </td>
+                <td>
+                    {{timecreated_dmY}}
+                </td>
+                <td>
+                    {{{closedgroupicon}}}
+                </td>
+            </tr>
+        {{/groups}}
         </tbody>
     </table>
 {{/hasgroups}}

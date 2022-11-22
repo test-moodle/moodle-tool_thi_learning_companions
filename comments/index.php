@@ -21,7 +21,7 @@ echo $OUTPUT->header();
 $notification = optional_param('n', null, PARAM_TEXT);
 if (!is_null($notification)) {
     $notificationtype = substr($notification, 0, 2) == 'n_' ? 'error' : 'success';
-    echo $OUTPUT->notification(get_string('notification_'.$notification, 'tool_learningcompanions'), $notificationtype);
+    echo $OUTPUT->notification(get_string('notification_'.$notification, 'local_learningcompanions'), $notificationtype);
 }
 
 $hascomments = count($comments) > 0;
