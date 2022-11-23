@@ -40,7 +40,9 @@
                     {{timecreated_dmY}}
                 </td>
                 <td>
-                    {{{closedgroupicon}}}
+                    {{#closedgroupbool}}
+                        <i class="icon fa fa-check"></i>
+                    {{/closedgroupbool}}
                 </td>
             </tr>
         {{/groups}}
