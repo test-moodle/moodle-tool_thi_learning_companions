@@ -2,6 +2,8 @@
 require_once '../../../../config.php';
 require_once '../../../../local/learningcompanions/lib.php';
 
+global $OUTPUT, $PAGE, $CFG;
+
 $context = context_system::instance();
 require_capability( 'tool/learningcompanions:comments_manage', $context);
 
