@@ -39,9 +39,15 @@ $string['membercount'] = 'Member count';
 $string['groupcreatedby'] = 'Created by';
 $string['groupadmins'] = 'Admins';
 $string['grouptimecreated'] = 'Created on';
+$string['grouplastactive'] = 'Last active';
 $string['closedgroup'] = 'Is closed group';
 $string['nogroups'] = 'There are no groups.';
 $string['navbar_groups'] = 'Group overview';
+$string['delete_group'] = 'Delete group';
+$string['go_to_chat'] = 'Go to group';
+$string['deletegroupconfirmtitle'] = 'Delete group?';
+$string['confirm_delete_group'] = '<h4>Are you sure you want to delete this group?</h4>
+<span>This can <b>not</b> be undone.</span>';
 
 // Comments overview
 $string['commentsoverview'] = 'Flagged comments overview';

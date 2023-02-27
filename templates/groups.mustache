@@ -9,14 +9,16 @@
                 <th>{{#str}}groupcreatedby, tool_learningcompanions{{/str}}</th>
                 <th>{{#str}}groupadmins, tool_learningcompanions{{/str}}</th>
                 <th>{{#str}}grouptimecreated, tool_learningcompanions{{/str}}</th>
+                <th>{{#str}}grouplastactive, tool_learningcompanions{{/str}}</th>
                 <th>{{#str}}closedgroup, tool_learningcompanions{{/str}}</th>
+                <th>{{#str}}actions, tool_learningcompanions{{/str}}</th>
             </tr>
         </thead>
         <tbody>
         {{#groups}}
             <tr>
                 <td>
-                    {{name}}
+                    <a href="{{cfg.wwwroot}}/local/learningcompanions/chat.php?groupid={{id}}">{{name}}</a>
                 </td>
                 <td>
                     {{membercount}}
@@ -36,14 +38,18 @@
                         </span>
                     {{/admins}}
                 </td>
-                <td>
+                <td data-order="{{timecreated}}">
                     {{timecreated_dmY}}
                 </td>
-                <td>
-                    {{#closedgroupbool}}
-                        <i class="icon fa fa-check"></i>
-                    {{/closedgroupbool}}
+                <td data-order="{{last_active_time}}">
+                    {{last_active_time_dmy}}
                 </td>
+                <td>
+                    {{#closedgroup}}
+                        <i class="icon fa fa-check"></i>
+                    {{/closedgroup}}
+                </td>
+                <td><span class="js-delete-group" data-balloon="{{#str}}delete{{/str}}" data-balloon-pos="left" data-groupid="{{id}}"><i class="fa fa-trash"></i></span></td>
             </tr>
         {{/groups}}
         </tbody>
