@@ -42,6 +42,7 @@ $string['grouptimecreated'] = 'Created on';
 $string['closedgroup'] = 'Is closed group';
 $string['nogroups'] = 'There are no groups.';
 $string['navbar_groups'] = 'Group overview';
+$string['lastactivity'] = 'Last activity';
 
 // Comments overview
 $string['commentsoverview'] = 'Flagged comments overview';
@@ -77,3 +78,6 @@ $string['icon_comments'] = 'fa fa-graduation-cap';
 $string['icon_groups'] = 'fa fa-users';
 $string['manage_comments'] = 'Manage comments';
 $string['manage_groups'] = 'Manage groups';
+
+
+$string['back_to_admin_dashboard'] = 'Back to admin dashboard';

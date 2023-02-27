@@ -1,4 +1,5 @@
-<h1>{{#str}}groupoverview, tool_learningcompanions{{/str}}</h1>
+<h1>{{#str}}administration_head, tool_learningcompanions{{/str}}</h1>
+<h2 class="mb-5">{{#str}}groupoverview, tool_learningcompanions{{/str}}</h2>
 {{#hasgroups}}
     <table class="stripe hover compact" id="allgroupstable" data-paging="true" data-page-length="50">
         <thead>
@@ -10,6 +11,7 @@
                 <th>{{#str}}groupadmins, tool_learningcompanions{{/str}}</th>
                 <th>{{#str}}grouptimecreated, tool_learningcompanions{{/str}}</th>
                 <th>{{#str}}closedgroup, tool_learningcompanions{{/str}}</th>
+                <th>{{#str}}lastactivity, tool_learningcompanions{{/str}}</th>
             </tr>
         </thead>
         <tbody>
@@ -36,13 +38,14 @@
                         </span>
                     {{/admins}}
                 </td>
-                <td>
+                <td data-order="{{timecreated}}">
                     {{timecreated_dmY}}
                 </td>
                 <td>
-                    {{#closedgroupbool}}
-                        <i class="icon fa fa-check"></i>
-                    {{/closedgroupbool}}
+                    {{{closedgroupicon}}}
+                </td>
+                <td data-order="{{latestcomment}}">
+                    {{latestcomment_userdate}}
                 </td>
             </tr>
         {{/groups}}
@@ -52,3 +55,4 @@
 {{^groups}}
     <p>{{#str}}nogroups, tool_learningcompanions{{/str}}</p>
 {{/groups}}
+<a class="btn btn-primary mt-5" href="{{cfg.wwwroot}}/admin/tool/learningcompanions/index.php">{{#str}}back_to_admin_dashboard, tool_learningcompanions{{/str}}</a>

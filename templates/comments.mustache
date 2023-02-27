@@ -1,4 +1,5 @@
-<h1>{{#str}}commentsoverview, tool_learningcompanions{{/str}}</h1>
+<h1>{{#str}}administration_head, tool_learningcompanions{{/str}}</h1>
+<h2 class="mb-5">{{#str}}commentsoverview, tool_learningcompanions{{/str}}</h2>
 {{#hascomments}}
     <table class="stripe hover compact" id="flaggedcommentstable" data-paging="true" data-page-length="50">
         <thead>
@@ -15,7 +16,7 @@
     {{#comments}}
     <tr>
         <td {{#commentcut}} data-balloon="{{origincomment}}" data-balloon-pos="up" data-balloon-blunt data-balloon-length="xlarge" {{/commentcut}}>
-            {{comment}}
+            {{plaintext}}
         </td>
         <td>
             <span class="authorprofilelink">
@@ -27,7 +28,7 @@
                 <a href="{{flaggedbyuser_profileurl}}">{{flaggedbyuser_fullname}}</a>
             </span>
         </td>
-        <td>
+        <td data-order="{{timecreated}}">
             {{commentdate}}
         </td>
         <td>
@@ -51,3 +52,4 @@
 {{^comments}}
     <p>{{#str}}noflaggedcomments, tool_learningcompanions{{/str}}</p>
 {{/comments}}
+<a class="btn btn-primary mt-5" href="{{cfg.wwwroot}}/admin/tool/learningcompanions/index.php">{{#str}}back_to_admin_dashboard, tool_learningcompanions{{/str}}</a>

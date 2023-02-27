@@ -3,7 +3,7 @@ define([
     'core/config',
     'core/str',
     'core/modal_factory',
-    'local_learningcompanions/jquery.dataTables',
+    'local_learningcompanions/datatables',
     'local_learningcompanions/select2'
 ], function($, c, str, ModalFactory) {
     return {
