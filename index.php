@@ -21,7 +21,7 @@
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-require_once '../../../config.php';
+require_once dirname(__DIR__, 3).'/config.php';
 require_once __DIR__.'/locallib.php';
 
 $context = context_system::instance();
@@ -29,7 +29,8 @@ require_capability( 'tool/learningcompanions:manage', $context);
 
 $PAGE->set_context($context);
 $PAGE->set_url($CFG->wwwroot.'/admin/tool/learningcompanions/index.php');
-$PAGE->set_pagelayout('standard');
+$PAGE->set_pagelayout('admin');
+$PAGE->set_title(get_string('pluginname', 'tool_learningcompanions'));
 
 echo $OUTPUT->header();
 
