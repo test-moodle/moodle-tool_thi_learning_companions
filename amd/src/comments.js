@@ -4,8 +4,8 @@ define([
     'core/str',
     'core/modal_factory',
     'core/modal_events',
-    'local_learningcompanions/datatables',
-    'local_learningcompanions/select2'
+    'local_thi_learning_companions/datatables',
+    'local_thi_learning_companions/select2'
 ], function($, c, str, ModalFactory, ModalEvents) {
     return {
 
@@ -15,7 +15,7 @@ define([
 
         init: function() {
 
-            var translationURL = str.get_string('datatables_url', 'tool_learningcompanions');
+            var translationURL = str.get_string('datatables_url', 'tool_thi_learning_companions');
             translationURL.then(function(url) {
                 $('#flaggedcommentstable').DataTable({
                     language: {
@@ -31,10 +31,10 @@ define([
                 const comment = $(this).data('comment');
 
                 var strings = [
-                    {key: 'modal-deletecomment-title', component: 'tool_learningcompanions'},
-                    {key: 'modal-deletecomment-text', component: 'tool_learningcompanions', param: comment},
-                    {key: 'modal-deletecomment-okaybutton', component: 'tool_learningcompanions'},
-                    {key: 'modal-deletecomment-cancelbutton', component: 'tool_learningcompanions'},
+                    {key: 'modal-deletecomment-title', component: 'tool_thi_learning_companions'},
+                    {key: 'modal-deletecomment-text', component: 'tool_thi_learning_companions', param: comment},
+                    {key: 'modal-deletecomment-okaybutton', component: 'tool_thi_learning_companions'},
+                    {key: 'modal-deletecomment-cancelbutton', component: 'tool_thi_learning_companions'},
                 ];
 
                 str.get_strings(strings).then(function(strings) {
@@ -65,10 +65,10 @@ define([
                 const comment = $(this).data('comment');
 
                 var strings = [
-                    {key: 'modal-untagcomment-title', component: 'tool_learningcompanions'},
-                    {key: 'modal-untagcomment-text', component: 'tool_learningcompanions', param: comment},
-                    {key: 'modal-untagcomment-okaybutton', component: 'tool_learningcompanions'},
-                    {key: 'modal-untagcomment-cancelbutton', component: 'tool_learningcompanions'},
+                    {key: 'modal-untagcomment-title', component: 'tool_thi_learning_companions'},
+                    {key: 'modal-untagcomment-text', component: 'tool_thi_learning_companions', param: comment},
+                    {key: 'modal-untagcomment-okaybutton', component: 'tool_thi_learning_companions'},
+                    {key: 'modal-untagcomment-cancelbutton', component: 'tool_thi_learning_companions'},
                 ];
 
                 str.get_strings(strings).then(function(strings) {
@@ -105,7 +105,7 @@ define([
                 const commentid = $(this).data('cid');
 
                 $.ajax({
-                    url: M.cfg.wwwroot + '/admin/tool/learningcompanions/ajax.php',
+                    url: M.cfg.wwwroot + '/admin/tool/thi_learning_companions/ajax.php',
                     method: 'POST',
                     dataType: 'json',
                     data: {
@@ -114,9 +114,9 @@ define([
                     },
                     success: function (data) {
                         if (data === 'fail') {
-                            window.location.href = (M.cfg.wwwroot + '/admin/tool/learningcompanions/comments/index.php?n=n_d');
+                            window.location.href = (M.cfg.wwwroot + '/admin/tool/thi_learning_companions/comments/index.php?n=n_d');
                         } else {
-                            window.location.href = (M.cfg.wwwroot + '/admin/tool/learningcompanions/comments/index.php?n=d');
+                            window.location.href = (M.cfg.wwwroot + '/admin/tool/thi_learning_companions/comments/index.php?n=d');
                         }
                     }
                 });
@@ -127,7 +127,7 @@ define([
                 const commentid = $(this).data('cid');
 
                 $.ajax({
-                    url: M.cfg.wwwroot + '/admin/tool/learningcompanions/ajax.php',
+                    url: M.cfg.wwwroot + '/admin/tool/thi_learning_companions/ajax.php',
                     method: 'POST',
                     dataType: 'json',
                     data: {
@@ -136,9 +136,9 @@ define([
                     },
                     success: function (data) {
                         if (data === 'fail') {
-                            window.location.href = (M.cfg.wwwroot + '/admin/tool/learningcompanions/comments/index.php?n=n_uf');
+                            window.location.href = (M.cfg.wwwroot + '/admin/tool/thi_learning_companions/comments/index.php?n=n_uf');
                         } else {
-                            window.location.href = (M.cfg.wwwroot + '/admin/tool/learningcompanions/comments/index.php?n=uf');
+                            window.location.href = (M.cfg.wwwroot + '/admin/tool/thi_learning_companions/comments/index.php?n=uf');
                         }
                     }
                 });

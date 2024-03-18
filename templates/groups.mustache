@@ -1,25 +1,25 @@
-<h1>{{#str}}administration_head, tool_learningcompanions{{/str}}</h1>
-<h2 class="mb-5">{{#str}}groupoverview, tool_learningcompanions{{/str}}</h2>
+<h1>{{#str}}administration_head, tool_thi_learning_companions{{/str}}</h1>
+<h2 class="mb-5">{{#str}}groupoverview, tool_thi_learning_companions{{/str}}</h2>
 {{#hasgroups}}
     <table class="stripe hover compact" id="allgroupstable" data-paging="true" data-page-length="50">
         <thead>
             <tr>
-                <th>{{#str}}groupname, tool_learningcompanions{{/str}}</th>
-                <th>{{#str}}membercount, tool_learningcompanions{{/str}}</th>
-                <th>{{#str}}groupdescription, tool_learningcompanions{{/str}}</th>
-                <th>{{#str}}groupcreatedby, tool_learningcompanions{{/str}}</th>
-                <th>{{#str}}groupadmins, tool_learningcompanions{{/str}}</th>
-                <th>{{#str}}grouptimecreated, tool_learningcompanions{{/str}}</th>
-                <th>{{#str}}grouplastactive, tool_learningcompanions{{/str}}</th>
-                <th>{{#str}}closedgroup, tool_learningcompanions{{/str}}</th>
-                <th>{{#str}}actions, tool_learningcompanions{{/str}}</th>
+                <th>{{#str}}groupname, tool_thi_learning_companions{{/str}}</th>
+                <th>{{#str}}membercount, tool_thi_learning_companions{{/str}}</th>
+                <th>{{#str}}groupdescription, tool_thi_learning_companions{{/str}}</th>
+                <th>{{#str}}groupcreatedby, tool_thi_learning_companions{{/str}}</th>
+                <th>{{#str}}groupadmins, tool_thi_learning_companions{{/str}}</th>
+                <th>{{#str}}grouptimecreated, tool_thi_learning_companions{{/str}}</th>
+                <th>{{#str}}grouplastactive, tool_thi_learning_companions{{/str}}</th>
+                <th>{{#str}}closedgroup, tool_thi_learning_companions{{/str}}</th>
+                <th>{{#str}}actions, tool_thi_learning_companions{{/str}}</th>
             </tr>
         </thead>
         <tbody>
         {{#groups}}
             <tr>
                 <td>
-                    <a href="{{cfg.wwwroot}}/local/learningcompanions/chat.php?groupid={{id}}">{{name}}</a>
+                    <a href="{{cfg.wwwroot}}/local/thi_learning_companions/chat.php?groupid={{id}}">{{name}}</a>
                 </td>
                 <td>
                     {{membercount}}
@@ -57,6 +57,6 @@
     </table>
 {{/hasgroups}}
 {{^groups}}
-    <p>{{#str}}nogroups, tool_learningcompanions{{/str}}</p>
+    <p>{{#str}}nogroups, tool_thi_learning_companions{{/str}}</p>
 {{/groups}}
-<a class="btn btn-primary mt-5" href="{{cfg.wwwroot}}/admin/tool/learningcompanions/index.php">{{#str}}back_to_admin_dashboard, tool_learningcompanions{{/str}}</a>
+<a class="btn btn-primary mt-5" href="{{cfg.wwwroot}}/admin/tool/thi_learning_companions/index.php">{{#str}}back_to_admin_dashboard, tool_thi_learning_companions{{/str}}</a>

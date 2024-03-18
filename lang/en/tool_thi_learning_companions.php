@@ -17,7 +17,7 @@
 /**
  * Plugin strings are defined here.
  *
- * @package     tool_learningcompanions
+ * @package     tool_thi_learning_companions
  * @category    string
  * @copyright   2022 ICON Vernetzte Kommunikation GmbH <info@iconnewmedia.de>
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
@@ -26,10 +26,10 @@
 defined('MOODLE_INTERNAL') || die();
 
 $string['pluginname'] = 'Learning Companions - Admin Dashboard';
-$string['learningcompanions_settings'] = 'Admin tool learningcompanions';
-$string['navbar_learningcompanions'] = 'Learning companions';
+$string['thi_learning_companions_settings'] = 'Admin tool thi_learning_companions';
+$string['navbar_thi_learning_companions'] = 'Learning companions';
 $string['administration_head'] = 'Learning companions administration';
-$string['datatables_url'] = $CFG->wwwroot . '/admin/tool/learningcompanions/lang/en/datatables.json';
+$string['datatables_url'] = $CFG->wwwroot . '/admin/tool/thi_learning_companions/lang/en/datatables.json';
 
 // Group overview
 $string['groupoverview'] = 'Group overview';

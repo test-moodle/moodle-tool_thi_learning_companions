@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * @package     tool_learningcompanions
+ * @package     tool_thi_learning_companions
  * @category    admin
  * @copyright   2022 ICON Vernetzte Kommunikation GmbH <info@iconnewmedia.de>
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
@@ -30,7 +30,7 @@ $action = required_param('action', PARAM_TEXT);
 if ($action == 'deletecomment') {
     $commentid = required_param('commentid', PARAM_INT);
 
-    if (\local_learningcompanions\chats::delete_comment($commentid)) {
+    if (\local_thi_learning_companions\chats::delete_comment($commentid)) {
         echo '1';
     } else {
         echo 'fail';
@@ -40,7 +40,7 @@ if ($action == 'deletecomment') {
 if ($action == 'untagcomment') {
     $commentid = required_param('commentid', PARAM_INT);
 
-    if (\local_learningcompanions\chats::unflag_comment($commentid)) {
+    if (\local_thi_learning_companions\chats::unflag_comment($commentid)) {
         echo '1';
     } else {
         echo 'fail';

@@ -1,15 +1,15 @@
-<h1>{{#str}}administration_head, tool_learningcompanions{{/str}}</h1>
-<h2 class="mb-5">{{#str}}commentsoverview, tool_learningcompanions{{/str}}</h2>
+<h1>{{#str}}administration_head, tool_thi_learning_companions{{/str}}</h1>
+<h2 class="mb-5">{{#str}}commentsoverview, tool_thi_learning_companions{{/str}}</h2>
 {{#hascomments}}
     <table class="stripe hover compact" id="flaggedcommentstable" data-paging="true" data-page-length="50">
         <thead>
             <tr>
-                <th>{{#str}}comment, tool_learningcompanions{{/str}}</th>
-                <th>{{#str}}commentedby, tool_learningcompanions{{/str}}</th>
-                <th>{{#str}}flaggedby, tool_learningcompanions{{/str}}</th>
-                <th>{{#str}}commentdate, tool_learningcompanions{{/str}}</th>
-                <th>{{#str}}relatedchat, tool_learningcompanions{{/str}}</th>
-                <th>{{#str}}actions, tool_learningcompanions{{/str}}</th>
+                <th>{{#str}}comment, tool_thi_learning_companions{{/str}}</th>
+                <th>{{#str}}commentedby, tool_thi_learning_companions{{/str}}</th>
+                <th>{{#str}}flaggedby, tool_thi_learning_companions{{/str}}</th>
+                <th>{{#str}}commentdate, tool_thi_learning_companions{{/str}}</th>
+                <th>{{#str}}relatedchat, tool_thi_learning_companions{{/str}}</th>
+                <th>{{#str}}actions, tool_thi_learning_companions{{/str}}</th>
             </tr>
         </thead>
         <tbody>
@@ -33,14 +33,14 @@
         </td>
         <td>
             <span class="relatedchatlink">
-                <a href="/local/learningcompanions/chat.php?groupid={{groupId}}&postId={{id}}">{{#str}}go_to_chat, tool_learningcompanions{{/str}}</a>
+                <a href="/local/thi_learning_companions/chat.php?groupid={{groupId}}&postId={{id}}">{{#str}}go_to_chat, tool_thi_learning_companions{{/str}}</a>
             </span>
         </td>
         <td>
-            <span data-balloon="{{#str}}delete_comment, tool_learningcompanions{{/str}}" data-balloon-pos="up">
+            <span data-balloon="{{#str}}delete_comment, tool_thi_learning_companions{{/str}}" data-balloon-pos="up">
                 <i class="fa fa-trash flaggedcomments-deletecomment" data-cid="{{id}}" data-comment="{{origincomment}}"></i>
             </span>
-            <span data-balloon="{{#str}}untag_comment, tool_learningcompanions{{/str}}" data-balloon-pos="up">
+            <span data-balloon="{{#str}}untag_comment, tool_thi_learning_companions{{/str}}" data-balloon-pos="up">
                 <i class="fa fa-rotate-left flaggedcomments-untagcomment" data-cid="{{id}}" data-comment="{{origincomment}}"></i>
             </span>
         </td>
@@ -50,6 +50,6 @@
     </table>
 {{/hascomments}}
 {{^comments}}
-    <p>{{#str}}noflaggedcomments, tool_learningcompanions{{/str}}</p>
+    <p>{{#str}}noflaggedcomments, tool_thi_learning_companions{{/str}}</p>
 {{/comments}}
-<a class="btn btn-primary mt-5" href="{{cfg.wwwroot}}/admin/tool/learningcompanions/index.php">{{#str}}back_to_admin_dashboard, tool_learningcompanions{{/str}}</a>
+<a class="btn btn-primary mt-5" href="{{cfg.wwwroot}}/admin/tool/thi_learning_companions/index.php">{{#str}}back_to_admin_dashboard, tool_thi_learning_companions{{/str}}</a>

@@ -17,32 +17,32 @@
 /**
  * Local library file.
  *
- * @package     tool_learningcompanions
+ * @package     tool_thi_learning_companions
  * @category    admin
  * @copyright   2022 ICON Vernetzte Kommunikation GmbH <info@iconnewmedia.de>
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace tool_learningcompanions;
+namespace tool_thi_learning_companions;
 
 function getDashboardHeadline_Comments(){
-    $comments = \local_learningcompanions\chats::get_all_flagged_comments();
+    $comments = \local_thi_learning_companions\chats::get_all_flagged_comments();
     $commentcount = count($comments);
     $suffix = '';
     if ($commentcount === 1) {
         $suffix = '_single';
     }
-    $headline = get_string('dashboard_comments'.$suffix, 'tool_learningcompanions', $commentcount);
+    $headline = get_string('dashboard_comments'.$suffix, 'tool_thi_learning_companions', $commentcount);
     return $headline;
 }
 
 function getDashboardHeadline_Groups() {
-    $groups = \local_learningcompanions\groups::get_all_groups();
+    $groups = \local_thi_learning_companions\groups::get_all_groups();
     $groupcount = count($groups);
     $suffix = '';
     if ($groupcount === 1) {
         $suffix = '_single';
     }
-    $headline = get_string('dashboard_groups'.$suffix, 'tool_learningcompanions', $groupcount);
+    $headline = get_string('dashboard_groups'.$suffix, 'tool_thi_learning_companions', $groupcount);
     return $headline;
 }

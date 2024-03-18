@@ -17,16 +17,16 @@
 /**
  * Plugin version and other meta-data are defined here.
  *
- * @package     tool_learningcompanions
+ * @package     tool_thi_learning_companions
  * @copyright   2022 ICON Vernetzte Kommunikation GmbH <info@iconnewmedia.de>
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->component = 'tool_learningcompanions';
+$plugin->component = 'tool_thi_learning_companions';
 $plugin->release = '1.0.0';
 $plugin->version = 2023092200;
 $plugin->requires = 2019111800;
-$plugin->dependencies = array('local_learningcompanions' => 2022102501);
+$plugin->dependencies = array('local_thi_learning_companions' => 2022102501);
 $plugin->maturity = MATURITY_RC;

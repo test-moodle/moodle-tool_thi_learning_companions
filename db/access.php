@@ -17,7 +17,7 @@
 /**
  * Plugin capabilities are defined here.
  *
- * @package     tool_learningcompanions
+ * @package     tool_thi_learning_companions
  * @category    access
  * @copyright   2022 ICON Vernetzte Kommunikation GmbH <info@iconnewmedia.de>
  */
@@ -25,7 +25,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $capabilities = [
-    'tool/learningcompanions:manage' => [
+    'tool/thi_learning_companions:manage' => [
         'riskbitmask' => RISK_MANAGETRUST|RISK_CONFIG|RISK_PERSONAL,
         'captype' => 'write',
         'contextlevel' => CONTEXT_SYSTEM,
@@ -33,7 +33,7 @@ $capabilities = [
             'manager' => CAP_ALLOW,
         ],
     ],
-    'tool/learningcompanions:group_manage' => [
+    'tool/thi_learning_companions:group_manage' => [
         'riskbitmask' => RISK_MANAGETRUST|RISK_CONFIG|RISK_PERSONAL,
         'captype' => 'write',
         'contextlevel' => CONTEXT_SYSTEM,
@@ -41,7 +41,7 @@ $capabilities = [
             'manager' => CAP_ALLOW,
         ],
     ],
-    'tool/learningcompanions:comments_manage' => [
+    'tool/thi_learning_companions:comments_manage' => [
         'riskbitmask' => RISK_MANAGETRUST|RISK_CONFIG|RISK_PERSONAL,
         'captype' => 'write',
         'contextlevel' => CONTEXT_SYSTEM,
