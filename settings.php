@@ -28,9 +28,13 @@ defined('MOODLE_INTERNAL') || die();
 if ($hassiteconfig) {
     // phpcs:ignore Generic.CodeAnalysis.EmptyStatement.DetectedIf
 
-    $settings = new admin_settingpage( 'tool_thi_learning_companions', get_string('thi_learning_companions_settings', 'tool_thi_learning_companions') );
-    $category = new admin_category('lcconfig', get_string('adminareaname', 'local_thi_learning_companions'));
-    if (!$ADMIN->locate('lcconfig')) { // avoids "duplicate admin page name" warnings
+    $settings = new admin_settingpage( 'tool_thi_learning_companions',
+        get_string('thi_learning_companions_settings', 'tool_thi_learning_companions')
+    );
+    $category = new admin_category('lcconfig',
+        get_string('adminareaname', 'local_thi_learning_companions')
+    );
+    if (!$ADMIN->locate('lcconfig')) { // Avoids "duplicate admin page name" warnings.
         $ADMIN->add('root', $category);
     }
     $ADMIN->add('lcconfig', $settings);

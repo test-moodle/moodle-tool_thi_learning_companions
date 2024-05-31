@@ -28,5 +28,5 @@ $plugin->component = 'tool_thi_learning_companions';
 $plugin->release = '1.0.0';
 $plugin->version = 2023092200;
 $plugin->requires = 2019111800;
-$plugin->dependencies = array('local_thi_learning_companions' => 2022102501);
+$plugin->dependencies = ['local_thi_learning_companions' => 2022102501];
 $plugin->maturity = MATURITY_RC;

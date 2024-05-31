@@ -26,7 +26,7 @@ defined('MOODLE_INTERNAL') || die();
 
 $capabilities = [
     'tool/thi_learning_companions:manage' => [
-        'riskbitmask' => RISK_MANAGETRUST|RISK_CONFIG|RISK_PERSONAL,
+        'riskbitmask' => RISK_MANAGETRUST | RISK_CONFIG | RISK_PERSONAL,
         'captype' => 'write',
         'contextlevel' => CONTEXT_SYSTEM,
         'archetypes' => [
@@ -34,7 +34,7 @@ $capabilities = [
         ],
     ],
     'tool/thi_learning_companions:group_manage' => [
-        'riskbitmask' => RISK_MANAGETRUST|RISK_CONFIG|RISK_PERSONAL,
+        'riskbitmask' => RISK_MANAGETRUST | RISK_CONFIG | RISK_PERSONAL,
         'captype' => 'write',
         'contextlevel' => CONTEXT_SYSTEM,
         'archetypes' => [
@@ -42,7 +42,7 @@ $capabilities = [
         ],
     ],
     'tool/thi_learning_companions:comments_manage' => [
-        'riskbitmask' => RISK_MANAGETRUST|RISK_CONFIG|RISK_PERSONAL,
+        'riskbitmask' => RISK_MANAGETRUST | RISK_CONFIG | RISK_PERSONAL,
         'captype' => 'write',
         'contextlevel' => CONTEXT_SYSTEM,
         'archetypes' => [

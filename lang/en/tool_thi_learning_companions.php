@@ -29,9 +29,9 @@ $string['pluginname'] = 'Learning Companions - Admin Dashboard';
 $string['thi_learning_companions_settings'] = 'Admin tool thi_learning_companions';
 $string['navbar_thi_learning_companions'] = 'Learning companions';
 $string['administration_head'] = 'Learning companions administration';
-$string['datatables_url'] = $CFG->wwwroot . '/admin/tool/thi_learning_companions/lang/en/datatables.json';
+$string['datatables_url'] = $CFG->wwwroot . '/admin/tool/thi_learning_companions/json/en/datatables.json';
 
-// Group overview
+// Group overview.
 $string['groupoverview'] = 'Group overview';
 $string['groupname'] = 'Group name';
 $string['groupdescription'] = 'Group description';
@@ -50,7 +50,7 @@ $string['deletegroupconfirmtitle'] = 'Delete group?';
 $string['confirm_delete_group'] = '<h4>Are you sure you want to delete this group?</h4>
 <span>This can <b>not</b> be undone.</span>';
 
-// Comments overview
+// Comments overview.
 $string['commentsoverview'] = 'Flagged comments overview';
 $string['comment'] = 'Comment';
 $string['commentedby'] = 'Commented by';
@@ -75,7 +75,7 @@ $string['notification_n_uf'] = 'Could not unflagg comment';
 $string['notification_d'] = 'Comment successfully deleted.';
 $string['notification_n_d'] = 'Could not delete comment.';
 
-// Dashboard
+// Dashboard.
 $string['dashboard_comments'] = '{$a} Tagged comments';
 $string['dashboard_groups'] = '{$a} Groups';
 $string['dashboard_comments_single'] = '1 tagged comment';
@@ -84,6 +84,5 @@ $string['icon_comments'] = 'fa-solid fa-graduation-cap';
 $string['icon_groups'] = 'fa fa-users';
 $string['manage_comments'] = 'Manage comments';
 $string['manage_groups'] = 'Manage groups';
-
 
 $string['back_to_admin_dashboard'] = 'Back to admin dashboard';

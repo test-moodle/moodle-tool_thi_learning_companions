@@ -22,7 +22,7 @@
  */
 
 require_once((dirname(__DIR__, 3)).'/config.php');
-
+require_login();
 global $DB;
 
 $action = required_param('action', PARAM_TEXT);

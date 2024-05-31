@@ -21,9 +21,9 @@
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-require_once dirname(__DIR__, 3).'/config.php';
-require_once __DIR__.'/locallib.php';
-
+require_once(dirname(__DIR__, 3).'/config.php');
+require_once(__DIR__.'/locallib.php');
+require_login();
 $context = context_system::instance();
 require_capability( 'tool/thi_learning_companions:manage', $context);
 
@@ -34,42 +34,42 @@ $PAGE->set_title(get_string('pluginname', 'tool_thi_learning_companions'));
 
 echo $OUTPUT->header();
 
-$modules = array('comments', 'groups');
-$dashboardRows = array();
+$modules = ['comments', 'groups'];
+$dashboardrows = [];
 $counter = 0;
 $row = 0;
-$dashboardRows[0] = array('items' => array());
+$dashboardrows[0] = ['items' => []];
 
-foreach($modules as $module) {
-    $headlineFunction = '\tool_thi_learning_companions\getDashboardHeadline_'.ucfirst($module);
+foreach ($modules as $module) {
+    $headlinefunction = '\tool_thi_learning_companions\getDashboardHeadline_'.ucfirst($module);
 
-    if (function_exists($headlineFunction)) {
-        $headline = $headlineFunction();
+    if (function_exists($headlinefunction)) {
+        $headline = $headlinefunction();
     } else {
         $headline = get_string('dashboard_'.$module, 'tool_thi_learning_companions');
     }
 
-    $dashboardItem = array(
+    $dashboarditem = [
         'name'  => $module,
         'title' => $headline,
         'icon'  => get_string('icon_' . $module, 'tool_thi_learning_companions'),
         'link'  => $CFG->wwwroot . '/admin/tool/thi_learning_companions/'.$module.'/index.php',
-        'linktitle' => get_string('manage_' . $module, 'tool_thi_learning_companions')
-    );
+        'linktitle' => get_string('manage_' . $module, 'tool_thi_learning_companions'),
+    ];
 
-    $dashboardRows[$row]['items'][] = $dashboardItem;
+    $dashboardrows[$row]['items'][] = $dashboarditem;
     $counter++;
 
     if ($counter === 2) {
         $row++;
         $counter = 0;
-        $dashboardRows[$row] = array('items' => array());
+        $dashboardrows[$row] = ['items' => []];
     }
 }
 
-echo $OUTPUT->render_from_template('tool_thi_learning_companions/index', array(
-    'rows' => $dashboardRows,
-    'cfg' => $CFG
-));
+echo $OUTPUT->render_from_template('tool_thi_learning_companions/index', [
+    'rows' => $dashboardrows,
+    'cfg' => $CFG,
+]);
 
 echo $OUTPUT->footer();

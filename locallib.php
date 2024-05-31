@@ -25,7 +25,7 @@
 
 namespace tool_thi_learning_companions;
 
-function getDashboardHeadline_Comments(){
+function get_dashboard_headline_comments() {
     $comments = \local_thi_learning_companions\chats::get_all_flagged_comments();
     $commentcount = count($comments);
     $suffix = '';
@@ -36,7 +36,7 @@ function getDashboardHeadline_Comments(){
     return $headline;
 }
 
-function getDashboardHeadline_Groups() {
+function get_dashboard_headline_groups() {
     $groups = \local_thi_learning_companions\groups::get_all_groups();
     $groupcount = count($groups);
     $suffix = '';
