@@ -41,7 +41,7 @@ $row = 0;
 $dashboardrows[0] = ['items' => []];
 
 foreach ($modules as $module) {
-    $headlinefunction = '\tool_thi_learning_companions\getDashboardHeadline_'.ucfirst($module);
+    $headlinefunction = '\tool_thi_learning_companions\get_dashboard_headline_'.ucfirst($module);
 
     if (function_exists($headlinefunction)) {
         $headline = $headlinefunction();

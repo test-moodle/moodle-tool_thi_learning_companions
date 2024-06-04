@@ -3,7 +3,8 @@ import $ from 'jquery';
 import * as str from 'core/str';
 import * as ModalFactory from 'core/modal_factory';
 import DynamicForm from 'core_form/dynamicform';
-import 'local_thi_learning_companions/jquery.dataTables';
+// import 'local_thi_learning_companions/jquery.dataTables';
+import 'local_thi_learning_companions/datatables';
 
 export async function init() {
     setUpDataTable();

@@ -25,6 +25,12 @@
 
 namespace tool_thi_learning_companions;
 
+/**
+ * Note to developers: Don't let your IDE fool you. The function is being used.
+ * The function name gets created dynamically in index.php inside the foreach loop.
+ * @return \lang_string|string
+ * @throws \coding_exception
+ */
 function get_dashboard_headline_comments() {
     $comments = \local_thi_learning_companions\chats::get_all_flagged_comments();
     $commentcount = count($comments);
@@ -36,6 +42,13 @@ function get_dashboard_headline_comments() {
     return $headline;
 }
 
+/**
+ * Note to developers: Don't let your IDE fool you. The function is being used.
+ * The function name gets created dynamically in index.php inside the foreach loop.
+ * @return \lang_string|string
+ * @throws \coding_exception
+ * @throws \dml_exception
+ */
 function get_dashboard_headline_groups() {
     $groups = \local_thi_learning_companions\groups::get_all_groups();
     $groupcount = count($groups);

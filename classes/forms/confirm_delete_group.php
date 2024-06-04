@@ -50,7 +50,13 @@ class confirm_delete_group extends dynamic_form {
         groups::delete_group($groupid);
     }
 
+    public function set_data_for_dynamic_submission(): void {}
+
     protected function get_page_url_for_dynamic_submission(): moodle_url {
         return new moodle_url('/admin/tool/thi_learning_companions/groups/index.php');
+    }
+
+    public function validation($data, $files) {
+        return parent::validation($data, $files);
     }
 }

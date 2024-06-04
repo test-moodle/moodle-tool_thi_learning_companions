@@ -26,8 +26,8 @@ $PAGE->set_url($CFG->wwwroot.'/admin/tool/thi_learning_companions/comments/index
 $PAGE->set_pagelayout('admin');
 $PAGE->set_title(get_string('commentsoverview', 'tool_thi_learning_companions'));
 $PAGE->requires->js_call_amd('tool_thi_learning_companions/comments', 'init');
-$PAGE->requires->css('/local/thi_learning_companions/js_lib/DataTables/datatables.min.css');
-$PAGE->requires->css('/local/thi_learning_companions/js_lib/balloon.css');
+$PAGE->requires->css('/local/thi_learning_companions/js/DataTables/datatables.min.css');
+$PAGE->requires->css('/local/thi_learning_companions/css/balloon.css');
 $PAGE->navbar->add(get_string('navbar_thi_learning_companions', 'tool_thi_learning_companions'));
 $PAGE->navbar->add(get_string('navbar_comments', 'tool_thi_learning_companions'),
     new moodle_url('/admin/tool/thi_learning_companions/comments/index.php')
