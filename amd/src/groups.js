@@ -16,7 +16,7 @@ async function setUpDataTable() {
 
     $('#allgroupstable').DataTable({
         language: {
-            url: translationURL
+            url: M.cfg.wwwroot + translationURL
         }
     });
 }

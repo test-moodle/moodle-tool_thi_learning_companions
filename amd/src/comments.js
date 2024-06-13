@@ -19,7 +19,7 @@ define([
             translationURL.then(function(url) {
                 $('#flaggedcommentstable').DataTable({
                     language: {
-                        url: url
+                        url: M.cfg.wwwroot + url
                     }
                 });
             });

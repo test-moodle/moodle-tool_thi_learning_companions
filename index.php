@@ -15,6 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
+ * The initial page for this tool
  * @package     tool_thi_learning_companions
  * @category    admin
  * @copyright   2022 ICON Vernetzte Kommunikation GmbH <info@iconnewmedia.de>

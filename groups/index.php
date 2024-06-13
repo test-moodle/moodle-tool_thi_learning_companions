@@ -13,6 +13,15 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
+
+/**
+ * Shows overview of all groups
+ * @package     tool_thi_learning_companions
+ * @category    access
+ * @copyright   2022 ICON Vernetzte Kommunikation GmbH <info@iconnewmedia.de>
+ * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
 require_once(__DIR__ . '/../../../../config.php');
 require_once($CFG->dirroot . '/local/thi_learning_companions/lib.php');
 require_login();
